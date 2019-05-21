@@ -1,5 +1,5 @@
 # React
-## redux(本身与react没有任何关系,至少react使用这个社区)
+## redux(本身与react没有任何关系,是react使用这个社区)
 ### 概述
 - 一个存放共享数据(store)的仓库，store收某些事件(action),想要修改store,必须发送action，才能去修改它，store对事件的响应，就是修改状态。
 - 事件为action,修改状态的函数为reducer。
