@@ -33,7 +33,7 @@
     - }
   - #### 组件
     - import {observer} from 'mobx-react'
-    - @observer
+    - @observer // 装饰必须要 固定写法
     - class xxx extends Component{
       - xxx
       - onIncerment(){
