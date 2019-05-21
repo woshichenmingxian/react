@@ -19,4 +19,26 @@
      - console.log('#count',counter.count)
    - })
   
-- 
+- #### 案例
+  - #### store
+    - const counter=observable({
+      - count:0 
+    - })
+
+    - counter.increment=fuction(){
+        - this.count++
+    - }
+    - counter.decrement=fuction(){
+        - this.count--
+    - }
+  - #### 组件
+    - import {observer} from 'mobx-react'
+    - @observer
+    - class xxx extends Component{
+      - xxx
+      - onIncerment(){
+        - counter.increment()
+      - }
+      
+    - }
+  
