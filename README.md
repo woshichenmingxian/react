@@ -58,27 +58,27 @@
   #### 父组件render中的代码：
   -  统一传递this.props.numberIndex 、this.props.clickHandler给子组件中
      - const newElement=React.Children.map(this.props.children,(child,index)=>{
-     - if(child.type){
-     -   //克隆新的react的组件
-     -   return React.cloneElement(child,{
-     -     numberIndex:this.state.active===index,
-     -     clickHandler:()=>this.setState({active:index})
-     -   })
-     - }else{
-     -   return child
-     - }
+         - if(child.type){
+         -   //克隆新的react的组件
+           -   return React.cloneElement(child,{
+               -     numberIndex:this.state.active===index,
+               -     clickHandler:()=>this.setState({active:index})
+           -   })
+         - }else{
+            -   return child
+         - }
      - }))
      
      - return(
        -  \<Fragment>
-          - {newElement}
+            - {newElement}
        -  \</Fragment>
      - )
   
      #### 子组件
      - const Item=props=>{
-     - const {numberIndex,clickHandler}=props;
-     - return(
-        -   xxx
-     - )
+         - const {numberIndex,clickHandler}=props;
+         - return(
+            -   xxx
+         - )
      - }
