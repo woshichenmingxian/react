@@ -66,9 +66,9 @@
      - }
      - }))
      
-     -return(
-       - \<Fragment>
-         - {newElement}
-       - \</Fragment>
+     - return(
+       -  <Fragment>
+          - {newElement}
+       -  </Fragment>
      - )
   
