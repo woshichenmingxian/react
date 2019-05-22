@@ -75,3 +75,10 @@
        -  \</Fragment>
      - )
   
+ #### 子组件
+ - const Item=props=>{
+ - const {numberIndex,clickHandler}=props;
+ - return(
+    -   xxx
+ - )
+ - }
