@@ -53,7 +53,10 @@
   ## hooks
   ### useContext,useEffect,useState,useReducer 后续
   
-  ## 重写 this.props.children 统一传递this.props.numberIndex 、this.props.clickHandler给子组件中
+  ## 重写 this.props.children 
+  ### 案例
+  #### 父组件render中的代码：
+  -  统一传递this.props.numberIndex 、this.props.clickHandler给子组件中
      - const newElement=React.Children.map(this.props.children,(child,index)=>{
      - if(child.type){
      -   //克隆新的react的组件
