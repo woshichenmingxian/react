@@ -53,3 +53,22 @@
   ## hooks
   ### useContext,useEffect,useState,useReducer 后续
   
+  ## 重写 this.props.children 统一传递this.props.numberIndex 、this.props.clickHandler
+     - const newElement=React.Children.map(this.props.children,(child,index)=>{
+     - if(child.type){
+     -   //克隆新的react的组件
+     -   return React.cloneElement(child,{
+     -     numberIndex:this.state.active===index,
+     -     clickHandler:()=>this.setState({active:index})
+     -   })
+     - }else{
+     -   return child
+     - }
+     - }))
+     
+     -return(
+       - <Fragment>
+         - {newElement}
+       - </Fragment>
+     - )
+  
