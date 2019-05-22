@@ -53,7 +53,7 @@
   ## hooks
   ### useContext,useEffect,useState,useReducer 后续
   
-  ## 重写 this.props.children 
+  ## 重写 this.props.children 让父组件托管state
   ### 案例
   #### 父组件render中的代码：
   -  统一传递this.props.numberIndex 、this.props.clickHandler给子组件中
