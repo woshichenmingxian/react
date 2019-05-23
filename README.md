@@ -1,4 +1,5 @@
 # React
+- 主流前端框架设计模式基本都是MVVM,MVVM 由 Model、View、ViewModel 三部分构成，Model 层代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑；View 代表UI 组件，它负责将数据模型转化成UI 展现出来，ViewModel 是一个同步View 和 Model的对象(可认为逻辑部分,Model变更,调用ViewModel 逻辑去render View UI)。
 ## redux(本身与react没有任何关系,是react使用这个社区) 状态管理工具
 ### 概述
 - 一个存放共享数据(store)的仓库，store收某些事件(action),想要修改store,必须发送action，才能去修改它，store对事件的响应，就是修改状态。
