@@ -6,7 +6,7 @@
 
 - 基本优秀的框架的实线都离不开一种设计模式：发布与订阅(后续说明)。
 
-- react中class组件有大量的HOOk,在render的时候，都有可能重复渲染第一期的hook，造成性能不少的性能损坏，facebook团队一直在优化,从同步渲染到异步在到Hoks,react组件逐渐演变函数组件占主,没有钩子函数挂载，没有state(没有Hooks前),都是props传递,性能比class组件有很明显的提升，但是不能拥有自己的state，增加props的操作，也不是很方便，直到Hooks的出来，这也是react数据变革,在函数式组件中,数据变化，也能重新render,甚至小部分可以代替redux,让store更加简单。
+- react中class组件有大量的HOOk函数,在render的时候，都有可能重复渲染第一期的hook，造成性能不少的开销，facebook团队一直在优化,从同步渲染到异步在到Hoks,react组件逐渐演变函数组件占主,没有钩子函数挂载，没有state(没有Hooks前),都是props传递,性能比class组件有很明显的提升，但是不能拥有自己的state，增加props的操作，也不是很方便，直到Hooks的出来，这也是react数据变革,在函数式组件中,数据变化，也能重新render,甚至小部分可以代替redux,让store更加简单。
 
 ## 重写 this.props.children 让父组件托管state
 ### 案例
