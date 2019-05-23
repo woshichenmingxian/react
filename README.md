@@ -5,6 +5,36 @@
 - View 和 Model 之间并没有直接的联系，而是通过ViewModel进行交互，Model 和 ViewModel 之间的交互是双向的， 因此View 数据的变化会同步到Model中，而Model 数据的变化也会立即反应到View 上。
 
 - 基本优秀的框架的实线都离不开一种设计模式：发布与订阅(后续说明)。
+  
+  ## 重写 this.props.children 让父组件托管state
+  ### 案例
+  #### 父组件render中的代码：
+  -  统一传递this.props.numberIndex 、this.props.clickHandler给子组件中
+     - const newElement=React.Children.map(this.props.children,(child,index)=>{
+         - if(child.type){
+         -   //克隆新的react的组件
+           -   return React.cloneElement(child,{
+               -     numberIndex:this.state.active===index,
+               -     clickHandler:()=>this.setState({active:index})
+           -   })
+         - }else{
+            -   return child
+         - }
+     - }))
+     
+     - return(
+       -  \<Fragment>
+            - {newElement}
+       -  \</Fragment>
+     - )
+  
+     #### 子组件
+     - const Item=props=>{
+         - const {numberIndex,clickHandler}=props;
+         - return(
+            -   xxx
+         - )
+     - }
 
 ## redux(本身与react没有任何关系,是react使用这个社区) 状态管理工具
 ### 概述
@@ -59,33 +89,3 @@
   
   ## hooks
   ### useContext,useEffect,useState,useReducer 后续
-  
-  ## 重写 this.props.children 让父组件托管state
-  ### 案例
-  #### 父组件render中的代码：
-  -  统一传递this.props.numberIndex 、this.props.clickHandler给子组件中
-     - const newElement=React.Children.map(this.props.children,(child,index)=>{
-         - if(child.type){
-         -   //克隆新的react的组件
-           -   return React.cloneElement(child,{
-               -     numberIndex:this.state.active===index,
-               -     clickHandler:()=>this.setState({active:index})
-           -   })
-         - }else{
-            -   return child
-         - }
-     - }))
-     
-     - return(
-       -  \<Fragment>
-            - {newElement}
-       -  \</Fragment>
-     - )
-  
-     #### 子组件
-     - const Item=props=>{
-         - const {numberIndex,clickHandler}=props;
-         - return(
-            -   xxx
-         - )
-     - }
